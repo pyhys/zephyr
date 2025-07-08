@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) 2025 Jonas Berg
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&zephyr_i2c {
+	status = "okay";
+
+	adafruit_pcf8575: pcf8575@20 {
+		compatible = "nxp,pcf857x";
+		reg = <0x20>;
+		gpio-controller;
+		ngpios = <16>;
+		#gpio-cells = <2>;
+	};
+};
